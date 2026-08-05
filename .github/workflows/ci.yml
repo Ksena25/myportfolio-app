@@ -36,7 +36,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.PRIVATE_KEY }}
           script: |
-              docker rm -f portfolio || echo "Container not found, skipping removal."
+              docker rm -f myportfolio || echo "Container not found, skipping removal."
               docker run -d --name myportfolio -p 8080:80 ${{ secrets.DOCKER_USERNAME }}/cimyportfolio
 
 
